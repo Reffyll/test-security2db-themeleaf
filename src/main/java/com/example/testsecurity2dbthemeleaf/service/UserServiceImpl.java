@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService{
     public void saveUser(UserDto userDto) {
 
         User user = new User();
-        user.setName(userDto.getFirtsName() + " " + userDto.getLastName());
+        user.setName(userDto.getFirstName() + " " + userDto.getLastName());
         user.setEmail(userDto.getEmail());
 
         user.setPassword(passwordEncoder.encode(userDto.getPassword()));
@@ -62,7 +62,7 @@ public class UserServiceImpl implements UserService{
     private UserDto mapToUserDto(User user){
         UserDto userDto = new UserDto();
         String[] str = user.getName().split(" ");
-        userDto.setFirtsName(str[0]);
+        userDto.setFirstName(str[0]);
         userDto.setLastName(str[1]);
         userDto.setEmail(user.getEmail());
         return userDto;

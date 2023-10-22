@@ -16,7 +16,7 @@ public class UserDto {
 
     private Long id;
     @NotEmpty
-    private String firtsName;
+    private String firstName;
 
     @NotEmpty
     private String lastName;
